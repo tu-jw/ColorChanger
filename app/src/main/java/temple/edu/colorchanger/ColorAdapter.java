@@ -4,12 +4,13 @@ import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class ColorAdapter extends BaseAdapter {
 
-    Context context;
+    Context context; // The context passed through the constructor upon instantiation in whatever Activity is using it, will be "this" -- a reference to the current Activity where the code will take place
     ArrayList<String> items;
 
     public ColorAdapter(Context context, ArrayList<String> items){
@@ -34,6 +35,8 @@ public class ColorAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        return null;
+        TextView textView = new TextView(context);
+        textView.setText(getItem(position).toString());
+        return textView;
     }
 }
