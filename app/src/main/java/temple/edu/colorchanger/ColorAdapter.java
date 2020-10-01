@@ -1,6 +1,7 @@
 package temple.edu.colorchanger;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -37,6 +38,7 @@ public class ColorAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         TextView textView = new TextView(context);
         textView.setText(getItem(position).toString());
+        textView.setBackgroundColor(Color.parseColor(getItem(position).toString().toLowerCase()));
         return textView;
     }
 }

@@ -52,7 +52,6 @@ public class ColorActivity extends AppCompatActivity {
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //greetingTextView.setText(parent.getItemAtPosition(position).toString());
                 Object selectedView;
                 if(parent.getItemAtPosition(position) == null){
                     selectedView = parent.getItemAtPosition(0);
@@ -70,12 +69,5 @@ public class ColorActivity extends AppCompatActivity {
             }
         });
 
-        /*
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                greetingTextView.setText(parent.getItemAtPosition(position).toString());
-            }
-        });*/
     }
 }
